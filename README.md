@@ -34,10 +34,18 @@ GET /probabilityOfUnitInjectorFail?VIN=4JGDA5HB4FA521206
 
 # Responses
 
-- success response- on success api returns object which contains expected response
+- success response- on success api returns object which contains expected response with status 200 OK
 
 ```rust
 {
-  "field" : string | number
+  "field": string | number
+}
+```
+
+- error response- on error api returns object with error message and status 400 Bad Request
+
+```rust
+{
+  "message": string
 }
 ```
